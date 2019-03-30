@@ -7,7 +7,9 @@ import java.util.Comparator;
 public class Sorting implements Sort {
     @Override
     public void sort(Object[] array) {
-    Comparator.comparing(Human::getName).thenComparing(Human::getBirthDate);
+        if (array instanceof Comparable[]){
+            sort(array);
+        }
     }
 
     @Override
@@ -17,6 +19,6 @@ public class Sorting implements Sort {
 
     @Override
     public void sort(Object[] array, Comparator comparator) {
-
+    Collections.reverse(Arrays.asList(array));
     }
 }

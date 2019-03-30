@@ -32,7 +32,5 @@ public interface Person extends Comparable {
      */
     LocalDate getBirthDate();
 
-    default int compareTo(Object o) {
-        return 0;
-    }
+    int compareTo(Object o);
 }

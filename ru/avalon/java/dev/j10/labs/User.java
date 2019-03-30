@@ -1,20 +1,20 @@
 package ru.avalon.java.dev.j10.labs;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.util.Comparator;
 
-public class Human implements Person {
+public class User implements Person {
     private String name;
     private LocalDate birthday;
 
-    Human(String name, LocalDate birthday) {
+    User(String name, LocalDate birthday) {
         this.name = name;
         this.birthday = birthday;
     }
 
     @Override
     public String toString() {
-        return "Human{" +
+        return "User{" +
                 "name='" + name + '\'' +
                 ", birthday=" + birthday +
                 '}';
@@ -29,4 +29,10 @@ public class Human implements Person {
     public LocalDate getBirthDate() {
         return birthday;
     }
+
+    @Override
+    public int compareTo(Object o) {
+        return Comparator.comparing(User::getName).thenComparing(User::getBirthDate).compare(this, (User) o);
+    }
 }
+
