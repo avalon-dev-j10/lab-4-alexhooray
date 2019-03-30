@@ -1,5 +1,6 @@
 package ru.avalon.java.dev.j10.labs;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -29,5 +30,9 @@ public interface Person extends Comparable {
      * @return дата рождения в виде экземпляра типа
      * {@link Date}
      */
-    Date getBirthDate();
+    LocalDate getBirthDate();
+
+    default int compareTo(Object o) {
+        return 0;
+    }
 }
