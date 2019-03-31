@@ -1,4 +1,4 @@
-package ru.avalon.java.dev.j10.labs;
+package ru.korovko.java.lab4;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -17,22 +17,9 @@ import java.util.Date;
  */
 public interface Person extends Comparable {
 
-    /**
-     * Возвращает имя человека.
-     *
-     * @return имя человека в виде строки
-     */
     String getName();
 
-    /**
-     * Возвращает дату рождения человека.
-     *
-     * @return дата рождения в виде экземпляра типа
-     * {@link Date}
-     */
     LocalDate getBirthDate();
 
-    default int compareTo(Object o) {
-        return 0;
-    }
+    int compareTo(Object o);
 }

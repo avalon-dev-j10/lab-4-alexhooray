@@ -1,13 +1,12 @@
-package ru.avalon.java.dev.j10.labs;
+package ru.korovko.java.lab4;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 
-public class Sorting implements Sort {
+public class SortImpl implements Sort {
     @Override
     public void sort(Object[] array) {
-    Comparator.comparing(Human::getName).thenComparing(Human::getBirthDate);
+        Arrays.sort(array);
     }
 
     @Override
@@ -17,6 +16,6 @@ public class Sorting implements Sort {
 
     @Override
     public void sort(Object[] array, Comparator comparator) {
-
+        Arrays.sort(array, comparator);
     }
 }
