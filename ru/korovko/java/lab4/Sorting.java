@@ -1,4 +1,4 @@
-package ru.avalon.java.dev.j10.labs;
+package ru.korovko.java.lab4;
 
 import java.util.Arrays;
 import java.util.Collections;
