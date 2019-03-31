@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
 
 	    String[] strings = {"Один", "Два", "Три", "Четыре", "Пять", "Шесть", "Семь", "Восемь", "Девять", "Десять",
                 "Одинадцать", "Двенадцать", "Тринадцать", "Четырнадцать", "Пятнадцать", "Шестнадцать", "Семнадцать",
