@@ -1,15 +1,12 @@
 package ru.korovko.java.lab4;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Comparator;
 
-public class Sorting implements Sort {
+public class SortImpl implements Sort {
     @Override
     public void sort(Object[] array) {
-        if (array instanceof Comparable[]){
-            sort(array);
-        }
+        Arrays.sort(array);
     }
 
     @Override
@@ -19,6 +16,6 @@ public class Sorting implements Sort {
 
     @Override
     public void sort(Object[] array, Comparator comparator) {
-    Collections.reverse(Arrays.asList(array));
+        Arrays.sort(array, comparator);
     }
 }

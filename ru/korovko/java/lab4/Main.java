@@ -12,7 +12,8 @@ public class Main {
                 "Одинадцать", "Двенадцать", "Тринадцать", "Четырнадцать", "Пятнадцать", "Шестнадцать", "Семнадцать",
                 "Восемнадцать", "Девятнадцать", "Двадцать"};
 
-	    Person[] persons = {new User("Илья",  LocalDate.of(1984, 3, 1)),
+	    Person[] persons = {
+	            new User("Илья",  LocalDate.of(1984, 3, 1)),
                 new User("Андрей", LocalDate.of(1984, 3, 3)),
                 new User("Антон", LocalDate.of(1950,2,10)),
                 new User("Максим", LocalDate.of(2000, 1, 21)),
@@ -33,13 +34,16 @@ public class Main {
                 new User("Александр", LocalDate.of(1978, 1, 4)),
                 new User("Валентин", LocalDate.of(1979, 2, 16))} ;
 
-        Sort sort = new Sorting();
-        Comparator<User> comparator = new NameComparator();
+        Sort sort = new SortImpl();
+        Comparator<String> comparator = new ComparatorImpl();
+
         sort.sort(persons);
         System.out.println(Arrays.toString(persons));
+
         sort.sort(strings);
         System.out.println(Arrays.toString(strings));
-        sort.sort(strings, comparator);
+
+        sort.sort(strings, comparator.reversed());
         System.out.println(Arrays.toString(strings));
     }
 }
